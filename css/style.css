@@ -1,0 +1,42 @@
+        /* Glopal Rules */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+:root {
+    --main-color: #009688;
+    --back-color: #f2f2f2;
+    --text-color: #c9c9c9;
+    --white: #f1f8f5;
+    --nav-color: #252f31;
+    --footer-color: #191e22
+}
+
+body {
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+@media (min-width: 1200px) {
+    .container {width: 1170px}
+}
+
+@media (min-width: 992px) {
+    .container {width: 970px}
+}
+
+@media (min-width: 768) {
+    .container {width: 750px}
+}
