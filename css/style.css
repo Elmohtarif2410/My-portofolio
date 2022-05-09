@@ -15,11 +15,14 @@ html {
     --text-color: #c9c9c9;
     --white: #f1f8f5;
     --nav-color: #252f31;
-    --footer-color: #191e22
+    --footer-color: #191e22;
+    --transition-delay: .4s;
+    --main-padding: 40px
 }
 
 body {
-    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-family: sans-serif, Tahoma, Geneva, Verdana;
+    height: 5000px;
 }
 
 .container {
@@ -29,14 +32,213 @@ body {
     margin-right: auto
 }
 
-@media (min-width: 1200px) {
-    .container {width: 1170px}
+@media (min-width: 768) {
+    .container {width: 750px}
 }
 
 @media (min-width: 992px) {
     .container {width: 970px}
 }
 
-@media (min-width: 768) {
-    .container {width: 750px}
+@media (min-width: 1200px) {
+    .container {width: 1170px}
 }
+
+button {
+    border: none;
+    background: none
+}
+
+button:focus {
+    outline: none
+}
+
+ul {list-style: none}
+
+
+
+
+        /* Start landing */
+
+.landing {
+    background-image: url(../images/landing.jpg);
+    background-size: cover;
+    background-position-X: center;
+    position: relative;
+    height: calc(100vh - 65px)
+}
+
+.landing::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, .4);
+}
+
+.landing .container {
+    position: relative;
+    height: 100%;
+    z-index: 1;
+}
+
+.landing .text {
+    width: fit-content;
+    max-width: 100%;
+    text-align: center;
+    color: var(--white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-family: sans-serif;
+
+}
+
+.landing .text h1 {
+    padding: 5px 5px;
+    border-top: 2px solid var(--white);
+    border-bottom: 2px solid var(--white);
+    font-size: 40px;
+    margin-bottom: 25px
+}
+
+.landing .text button {
+    color: var(--white);
+    border: 2px solid var(--white);
+    padding: 10px 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1
+}
+
+@media (max-width: 767px) {
+    .landing .text h1 {font-size: 24px}
+
+    .landing .text button {padding: 8px 15px}
+}
+
+.landing ul {
+    position: absolute; 
+    bottom: 30px;
+    right: 20px;
+}
+
+.landing ul li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+    margin-bottom: 8px;
+    cursor: pointer
+}
+
+.landing ul li:hover,
+.landing ul li:first-child {background-color: var(--white)}
+    
+        /* End landing */
+
+        /* Start Header */
+
+header {
+    background-color: var(--nav-color);
+    color: var(--white);
+    padding: 15px 0
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer
+}
+
+header .logo img {
+    width: 35px;
+    padding: 1px;
+    background-color: var(--white);
+}
+
+header .logo h3 {
+    text-transform: UPPERCASE;
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+header .logo h3 span {
+    color: var(--main-color);
+    text-transform: lowercase;
+    font-size: 24px;
+}
+
+header nav i {
+    font-size: 24px;
+    cursor: pointer
+}
+
+@media (min-width: 992px) {
+    header nav i#icon {display: none}
+}
+
+header nav i.click + ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 280px;
+    background: var(--main-color);
+    z-index: 2;
+}
+
+header nav i.click + ul li {
+    margin: 0;
+    padding-bottom: 12%;
+    font-size: 18px;
+    border-bottom: 1px solid;
+    padding-left: 10px;
+    color: var(--white)
+}
+
+header nav i.click + ul li:last-of-type {border: none}
+
+header nav ul {
+    display: flex;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--text-color);
+    font-size: 15px;
+}
+
+@media (max-width: 991px) {
+    header nav ul {
+        display: none;
+    }
+}
+
+header nav ul li {
+    margin-left: 15px;
+}
+
+header nav ul li a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition-delay);
+}
+
+header nav ul li a:hover {
+    color: var(--main-color);
+}
+
+        /* End Header */

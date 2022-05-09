@@ -11,6 +11,51 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        
+        <!-- Start landing section -->
+        <div class="landing" id="home">
+            <div class="container">
+                <div class="text">
+                    <h1>front end developer</h1>
+                    <button>learn more</button>
+                </div>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <!-- End landing section -->
+        <!-- Start Header-->
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <img src="images/logo.jpg" alt="logo">
+                    <h3>El<span>mohtarif</span></h3>
+                </div>
+                <nav>
+                    <i class="fas fa-align-justify" id="icon"></i>
+                    <ul id="nav">
+                        <li><a href="#home">home</a></li>
+                        <li><a href="#">about me</a></li>
+                        <li><a href="#">skils</a></li>
+                        <li><a href="#">resume</a></li>
+                        <li><a href="#">testmonials</a></li>
+                        <li><a href="#">portofolio</a></li>
+                        <li><a href="#">contact me</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- End Header -->
+
+        <script>
+            var icon = document.getElementById("icon");
+
+            icon.onclick = function () {
+                icon.classList.toggle("click");
+            }
+
+        </script>
     </body>
 </html>
