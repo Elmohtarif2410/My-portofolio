@@ -16,8 +16,9 @@ html {
     --white: #f1f8f5;
     --nav-color: #252f31;
     --footer-color: #191e22;
+    --heading-color: #6e7776;
     --transition-delay: .4s;
-    --main-padding: 40px
+    --main-padding: 60px
 }
 
 body {
@@ -182,7 +183,9 @@ header .logo h3 span {
 
 header nav i {
     font-size: 24px;
-    cursor: pointer
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
 }
 
 @media (min-width: 992px) {
@@ -242,3 +245,36 @@ header nav ul li a:hover {
 }
 
         /* End Header */
+
+        /* Start My Values */
+
+.my-values{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding)
+}
+
+.my-values .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 35px;
+    align-items: center;
+    text-align: center
+}
+
+.my-values .container section i {
+    font-size: 42px;
+    color: var(--main-color)
+}
+
+.my-values .container section h3 {
+    margin: 25px;
+    text-transform: uppercase;
+    color: var(--heading-color)
+}
+
+.my-values .container section p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+        /* End My Values */
