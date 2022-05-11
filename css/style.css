@@ -57,7 +57,20 @@ button:focus {
 ul {list-style: none}
 
 
+/* conpounat */
 
+.main-heading h2 {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: var(--heading-color)
+}
+
+.main-heading p {
+    color: var(--heading-color);
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 30px
+}
 
         /* Start landing */
 
@@ -278,3 +291,69 @@ header nav ul li a:hover {
 }
 
         /* End My Values */
+
+        /* Start About Me  */
+.about-me {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    position: relative;
+    background-color: var(--back-color);
+}
+
+.about-me .container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.about-me .container img {
+    width: 35%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.about-me .container .text {
+    width: 62%;
+}
+
+.about-me .container .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 15px;
+    row-gap: 30px;
+}
+
+.about-me .container .content section {
+    display: flex;
+}
+
+.about-me .container section i {
+    font-size: 28px;
+    color: var(--main-color);
+    margin-right: 15px;
+    margin-top: 12px;
+}
+
+.about-me .container section h3 {
+    color: var(--heading-color);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.about-me .container section p {
+    color: var(--heading-color);
+    line-height: 1.6;
+}
+
+@media (max-width: 767px) {
+    .about-me .container img {display: none}
+    .about-me .container .text {width: 100%; text-align: center}
+    .about-me .container .text p {text-align: center}
+    .about-me .container .content {grid-template-columns: none}
+    .about-me .container .content section {display: unset}
+    .about-me .container section i {margin: 0 0 15px 0}
+}
+
+        /* End About Me  */
