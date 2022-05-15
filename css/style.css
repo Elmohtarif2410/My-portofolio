@@ -957,8 +957,14 @@ footer .container .icon a {
     background: var(--heading-color);
     font-size: 20px;
     line-height: 1;
+    text-decoration: none;
     transition: var(--transition-delay);
     margin-left: 8px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center
 }
 
 footer .container .icon a:hover {
