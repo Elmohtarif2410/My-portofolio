@@ -775,7 +775,7 @@ header nav ul li a:hover {
     cursor: pointer;
     overflow: hidden;
     margin: 5px;
-    transition: 1s
+    transition: all 1s
 }
 
 .portfolio .projects section:hover .text {opacity: unset}

@@ -191,7 +191,7 @@ for (c = 1; c < category.length; c++) {
         // loop delete section projects when click this category
         for (i = 0; i < projectCategory.length; i++) {
             projectCategoryName = projectCategory[i].textContent;
-            if (categoryName != projectCategoryName) {
+            if (!projectCategoryName.includes(categoryName)) {             
                 projectCategory[i].parentElement.parentElement.style.display = "none";
             }
         }
@@ -242,11 +242,11 @@ project_9.onclick = function () {
     open("https://elmohtarif2410.github.io/order-summary-card/");
 };
 project_10.onclick = function () {
-    open("");
+    open("https://elmohtarif2410.github.io/potfolio_one/");
 };
 project_11.onclick = function () {
-    open("");
+    open("https://elmohtarif2410.github.io/age-calculator/");
 };
 project_12.onclick = function () {
-    open("");
+    open("https://elmohtarif2410.github.io/calculator-app/");
 };
