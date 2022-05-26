@@ -23,7 +23,6 @@ html {
 
 body {
     font-family: sans-serif, Tahoma, Geneva, Verdana;
-    height: 5000px;
 }
 
 .container {
@@ -57,8 +56,7 @@ button:focus {
 ul {list-style: none}
 
 
-/* conpounat */
-
+/* conpounant */
 .main-heading h2 {
     text-transform: uppercase;
     margin-bottom: 30px;
@@ -72,6 +70,7 @@ ul {list-style: none}
     margin-bottom: 30px
 }
 
+/* Buttons Action Page */
 .top-page {
     position: fixed;
     bottom: 70px;
@@ -121,14 +120,19 @@ ul {list-style: none}
     bottom: -14px;
 }
 
+/* ************************************************************
+************************ Start Styling ************************
+************************************************************ */
+
         /* Start landing */
 
 .landing {
-    background-image: url(../images/landing.jpg);
+    background-image: url(../images/landing-1.jpg);
     background-size: cover;
-    background-position-X: center;
+    background-position: top center;
     position: relative;
-    height: calc(100vh - 62px)
+    height: calc(100vh - 62px);
+    transition: 1s;
 }
 
 .landing::after {
@@ -138,13 +142,13 @@ ul {list-style: none}
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgb(0, 0, 0, .4);
+    background-color: rgb(0, 0, 0, .4)
 }
 
 .landing .container {
     position: relative;
     height: 100%;
-    z-index: 1;
+    z-index: 1
 }
 
 .landing .text {
@@ -156,9 +160,7 @@ ul {list-style: none}
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-transform: uppercase;
-    font-family: sans-serif;
-
+    text-transform: uppercase
 }
 
 .landing .text h1 {
@@ -191,11 +193,11 @@ ul {list-style: none}
     border-radius: 50%;
     border: 1px solid var(--white);
     margin-bottom: 8px;
-    cursor: pointer
+    cursor: pointer;
+    transition: var(--transition-delay)
 }
 
-.landing ul li:hover,
-.landing ul li:first-child {background-color: var(--white)}
+.landing ul li.active {background-color: var(--white)}
 
 @media (max-width: 767px) {
     .landing .text h1 {font-size: 24px}
@@ -235,6 +237,7 @@ header .logo h3 {
     text-transform: UPPERCASE;
     font-size: 22px;
     margin-left: 10px;
+    margin-right: 10px;
 }
 
 header .logo h3 span {
@@ -271,6 +274,8 @@ header nav i.click + ul li {
     padding-left: 10px;
     color: var(--white)
 }
+
+header nav i.click + ul li a:hover {color: var(--nav-color) }
 
 header nav i.click + ul li:last-of-type {border: none}
 
@@ -402,7 +407,7 @@ header nav ul li a:hover {
     .about-me .container .text .main-heading p {text-align: center}
     .about-me .container .content {grid-template-columns: none}
     .about-me .container .content section {display: unset}
-    .about-me .container section i {margin: 0 0 15px 0}
+    .about-me .container section i {margin: 0 0 15px 0 !important}
 }
 
         /* End About Me  */
@@ -539,39 +544,39 @@ header nav ul li a:hover {
 }
         /* End Resume */
 
-           /* Start Testmonials */
+           /* Start cv-information */
 
-.testmonials {
+.cv-information {
     padding-top: var(--main-padding);
     padding-bottom: var(--main-padding)
 }
 
-.testmonials article {
+.cv-information article {
     display: grid;
     grid-template-columns: repeat(2, 47%);
     column-gap: 6%;
 }
 
-.testmonials article .content {margin-top: 58px}
+.cv-information article .content {margin-top: 58px}
 
-.testmonials article section:not(:last-of-type) {
+.cv-information article section:not(:last-of-type) {
     margin-bottom: 80px;
 }
 
-.testmonials article section h3 {
+.cv-information article section h3 {
     text-transform: uppercase;
     color: var(--heading-color);
     margin-bottom: 20px
 }
 
-.testmonials article section p:first-of-type{
+.cv-information article section p:first-of-type{
     text-transform: capitalize;
     font-size: 18px;
     color: var(--text-color);
     margin-bottom: 20px
 }
 
-.testmonials article section span {
+.cv-information article section span {
     display: block;
     width: fit-content;
     background: var(--main-color);
@@ -581,7 +586,7 @@ header nav ul li a:hover {
     line-height: 1;
 }
 
-.testmonials article section hr {
+.cv-information article section hr {
     margin-top: 30px;
     margin-bottom: 30px;
     border: none;
@@ -589,13 +594,13 @@ header nav ul li a:hover {
     background: var(--text-color)
 }
 
-.testmonials article section p:last-of-type {
+.cv-information article section p:last-of-type {
     line-height: 1.6;
     color: var(--text-color);
 }
 
 /* break from Articles  */
-.testmonials .container > hr {
+.cv-information .container > hr {
     border: none;
     height: 1px;
     background: var(--text-color);
@@ -604,14 +609,14 @@ header nav ul li a:hover {
 }
 
 @media (max-width: 767px) {
-    .testmonials article {display: block}
+    .cv-information article {display: block}
 }
 
-        /* End Testmonials */
+        /* End cv-information */
 
-        /* Start Qoute */
+        /* Start testmonials */
 
-.qoute {
+.testmonials {
     padding-top: var(--main-padding);
     padding-bottom: var(--main-padding);
     background-image: url(../images/quote.jpg);
@@ -621,7 +626,7 @@ header nav ul li a:hover {
     position: relative
 }
 
-.qoute::before {
+.testmonials::before {
     content: "";
     position: absolute;
     top: 0;
@@ -631,17 +636,18 @@ header nav ul li a:hover {
     background-color: rgb(250, 250, 250, .15);
 }
 
-.qoute .container {position: relative;z-index: 1;}
+.testmonials .container {position: relative; z-index: 1}
 
-.qoute blockquote {
+.testmonials blockquote {
     color: var(--text-color);
     line-height: 1.6;
     font-size: 18px;
     margin-bottom: 30px;
-    position: relative
+    position: relative;
+    transition: var(--transition-delay)
 }
 
-.qoute blockquote::before {
+.testmonials blockquote::before {
     font-family: "Font Awesome 6 Free";
     content: '\f10d';
     font-weight: bold;
@@ -650,7 +656,7 @@ header nav ul li a:hover {
     transform: translate(-15px, -5px)
 }
 
-.qoute blockquote::after {
+.testmonials blockquote::after {
     content: "\f10e";
     font-family: "Font Awesome 6 Free";
     font-weight: bold;
@@ -659,33 +665,34 @@ header nav ul li a:hover {
     transform: translate(4px, -4px)
 }
 
-.qoute h3 {
+.testmonials h3 {
     text-transform: uppercase;
     color: var(--white);
     font-size: 18px;
     margin-bottom: 30px;
+    transition: var(--transition-delay)
 }
 
-.qoute ul {
+.testmonials ul {
     display: flex;
     justify-content: center
 }
 
-.qoute ul li {
+.testmonials ul li {
     width: 12px;
     height: 12px;
     border: 1px solid var(--main-color);
     border-radius: 50%;
     margin-right: 10px;
-    cursor: pointer
+    cursor: pointer;
+    transition: var(--transition-delay);
 }
 
-.qoute ul li.active,
-.qoute ul li:hover {
+.testmonials ul li.active {
     background-color: var(--main-color);
 }
 
-        /* End Qoute */
+        /* End testmonials */
 
         /* Start Portfolio */
 
@@ -744,17 +751,17 @@ header nav ul li a:hover {
     text-transform: uppercase;
     color: var(--heading-color);
     font-weight: bold;
-    cursor: pointer
+    cursor: pointer;
+    transition: var(--transition-delay);
 }
 
-.portfolio ul li.active,
-.portfolio ul li:hover {
+.portfolio ul li.active {
     background-color: var(--main-color);
     color: var(--white)
 }
 
 .portfolio .projects {
-    height: 750px;
+    max-height: 750px;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -763,17 +770,13 @@ header nav ul li a:hover {
 
 .portfolio .projects section {
     width: calc(33.3333% - 10px);
-    height: calc(33.3333% - 10px);
+    height: 240px;
     position: relative;
     cursor: pointer;
     overflow: hidden;
-    margin-bottom: 15px;
-    margin-right: 15px;
+    margin: 5px;
+    transition: 1s
 }
-
-.portfolio .projects section:nth-of-type(3),
-.portfolio .projects section:nth-of-type(6),
-.portfolio .projects section:nth-of-type(9) {margin-right: 0;}
 
 .portfolio .projects section:hover .text {opacity: unset}
 
@@ -784,7 +787,7 @@ header nav ul li a:hover {
 .portfolio .projects section img {
     width: 100%;
     height: 100%;
-    transition: var(--transition-delay);
+    transition: var(--transition-delay)
 }
 
 .portfolio .projects section .text {
@@ -817,22 +820,14 @@ header nav ul li a:hover {
     padding: 10px 25px;
     font-weight: bold;
     cursor: pointer;
-    line-height: 1
+    line-height: 1;
+    transition: var(--transition-delay);
 }
 
 @media (max-width: 991px) {
     .portfolio .projects section {
-        width: calc(50% - 7.5px);
-        height: calc(33.3333% - 10px);
-        margin-bottom: 15px;
-        margin-right: 15px;
+        width: calc(50% - 10px)
     }
-
-    .portfolio .projects section:nth-of-type(2),
-    .portfolio .projects section:nth-of-type(4),
-    .portfolio .projects section:nth-of-type(6) {margin-right: 0}
-
-    .portfolio .projects section:nth-of-type(3) {margin-right: 15px}
 }
 
 @media (max-width: 767px) {
@@ -846,13 +841,8 @@ header nav ul li a:hover {
     .portfolio .projects {justify-content: center}
 
     .portfolio .projects section {
-        width: 90%;
-        height: calc(33.3333% - 10px);
-        margin-bottom: 15px;
-        margin-right: 0;
+        width: 90%
     }
-
-    .portfolio .projects section:nth-of-type(3) {margin-right: 0}
 }
 
         /* End Portfolio */
@@ -988,3 +978,7 @@ footer .container .icon a:hover {
     }
 }
         /* End Footer  */
+
+/* ************************************************************
+************************ End Styling **************************
+************************************************************ */
