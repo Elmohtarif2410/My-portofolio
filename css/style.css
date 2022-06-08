@@ -130,6 +130,7 @@ ul {list-style: none}
     background-image: url(../images/landing-1.jpg);
     background-size: cover;
     background-position: top center;
+    background-color: var(--back-color);
     position: relative;
     height: calc(100vh - 62px);
     transition: 1s;
@@ -358,11 +359,13 @@ header nav ul li a:hover {
 }
 
 .about-me .container img {
+    background-color: var(--text-color);
     width: 35%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
+    object-fit: cover
 }
 
 .about-me .container .text {
@@ -514,11 +517,11 @@ header nav ul li a:hover {
 .resume {
     padding-top: var(--main-padding);
     padding-bottom: var(--main-padding);
-    background-color: #f2f2f1;
     text-align: center;
     background-image: url(../images/resume.png);
     background-size: cover;
-    background-position: center
+    background-position: center;
+    background-color: var(--back-color);
 }
 
 .resume h2 {
@@ -622,6 +625,7 @@ header nav ul li a:hover {
     background-image: url(../images/quote.jpg);
     background-size: cover;
     background-position: center;
+    background-color: var(--back-color);
     text-align: center;
     position: relative
 }
@@ -769,6 +773,7 @@ header nav ul li a:hover {
 }
 
 .portfolio .projects section {
+    background-color: var(--back-color);
     width: calc(33.3333% - 10px);
     height: 240px;
     position: relative;

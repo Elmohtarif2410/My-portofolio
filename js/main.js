@@ -245,8 +245,8 @@ project_10.onclick = function () {
     open("https://elmohtarif2410.github.io/potfolio_one/");
 };
 project_11.onclick = function () {
-    open("https://elmohtarif2410.github.io/age-calculator/");
+    open("https://elmohtarif2410.github.io/calculator-app/");
 };
 project_12.onclick = function () {
-    open("https://elmohtarif2410.github.io/calculator-app/");
+    open("https://elmohtarif2410.github.io/age-calculator/");
 };
