@@ -19,7 +19,7 @@ landingButton[1].onclick = function () {
     landingButton[0].classList.remove("active");
     landingButton[2].classList.remove("active");
     // change to image
-    landing.style.backgroundImage = "url(images/landing-2.jpg)";
+    landing.style.backgroundImage = "url(images/landing-2.png)";
 }
 
 landingButton[2].onclick = function () {
@@ -30,6 +30,39 @@ landingButton[2].onclick = function () {
     // change to image
     landing.style.backgroundImage = "url(images/landing-3.jpg)";
 }
+
+/************* looping clicked to buttons => 5 secound ************/
+// action funcution after window on load becouse image loaded in page
+window.onload = function () {
+
+    setTimeout(function () {
+        // click to button two after window on load in 5 secound
+        landingButton[1].click();
+        setInterval(function () {
+            // click to button two every 15 seconds
+            landingButton[1].click()
+        }, 15000)
+    }, 5000);
+    
+    setTimeout(function () {
+        // click to button three after window on load in 10 secound
+        landingButton[2].click();
+        setInterval(function () {
+            // click to button three every 15 seconds
+            landingButton[2].click()
+        }, 15000)
+    }, 10000);
+    
+    setTimeout(function () {
+        // click to button three after window on load in 15 secound
+        landingButton[0].click();
+        setInterval(function () {
+            // click to button one every 15 seconds
+            landingButton[0].click()
+        }, 15000)
+    }, 15000);
+}
+
 
 /****************************************************************************
 ********************* Functionalty of slide to Testmonials ******************
@@ -44,8 +77,8 @@ testmonialsButton[0].onclick = function () {
     testmonialsButton[1].classList.remove("active");
     testmonialsButton[2].classList.remove("active");
     // change to image
-        quote.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem accusamus laborum deserunt, illo reprehenderit repellendus aliquam, dolorum unde mollitia veritatis odio. Exercitationem voluptatibus facilis error atque possimus perferendis.";
-        nameQuote.textContent = "name one";
+    quote.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem accusamus laborum deserunt, illo reprehenderit repellendus aliquam, dolorum unde mollitia veritatis odio. Exercitationem voluptatibus facilis error atque possimus perferendis.";
+    nameQuote.textContent = "name one";
 }
 
 testmonialsButton[1].onclick = function () {
@@ -56,7 +89,6 @@ testmonialsButton[1].onclick = function () {
     // change to image
     quote.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem accusamus laborum deserunt, illo reprehenderit repellendus aliquam, dolorum unde mollitia veritatis odio. Exercitationem voluptatibus facilis error atque possimus.";
     nameQuote.textContent = "name Two";
-
 }
 
 testmonialsButton[2].onclick = function () {
@@ -69,6 +101,7 @@ testmonialsButton[2].onclick = function () {
     nameQuote.textContent = "name three"
 }
 
+
 /****************************************************************************
 ************************** functionalty of Anmition *************************
 ****************************************************************************/
@@ -76,6 +109,9 @@ let anmation = document.querySelectorAll(".skills section.progress div span"),
     body = document.querySelector("body");
 
 window.onscroll = function () {
+    // when scroll to window page => remove class click in icon
+    icon.classList.remove("click");
+
     // function button scroll top page
     if (window.scrollY >= 700) {
         topPage.style.opacity = "1";
@@ -86,54 +122,54 @@ window.onscroll = function () {
     }
 
     // Anmiation to Skills section
-    if (body.scrollWidth > 1200) {
-        console.log("test")
-        if (window.scrollY >= 1300) {
-            anmation[0].style.animation = "progress ease-in-out 1.5s running";
-            anmation[1].style.animation = "progress ease-in-out 1.5s running";
-            anmation[2].style.animation = "progress ease-in-out 1.5s running";
-            anmation[3].style.animation = "progress ease-in-out 1.5s running";
-        } 
-    } else if (880 < body.scrollWidth < 1200) {
-        if (window.scrollY >= 1500) {
-            anmation[0].style.animation = "progress ease-in-out 1.5s running";
-            anmation[1].style.animation = "progress ease-in-out 1.5s running";
-            anmation[2].style.animation = "progress ease-in-out 1.5s running";
-            anmation[3].style.animation = "progress ease-in-out 1.5s running";
-        } 
-    } else if (767 < body.scrollWidth < 880) {
-        if (window.scrollY >= 1800) {
-            anmation[0].style.animation = "progress ease-in-out 1.5s running";
-            anmation[1].style.animation = "progress ease-in-out 1.5s running";
-            anmation[2].style.animation = "progress ease-in-out 1.5s running";
-            anmation[3].style.animation = "progress ease-in-out 1.5s running";
-        }
-    } else {
-        anmation[0].style.animation = "progress ease-in-out 1.5s running";
-        anmation[1].style.animation = "progress ease-in-out 1.5s running";
-        anmation[2].style.animation = "progress ease-in-out 1.5s running";
-        anmation[3].style.animation = "progress ease-in-out 1.5s running";
+    let skills = document.querySelector(".skills");
+        skillsHeightPage = skills.offsetTop,
+        skillsHeight = skills.offsetHeight,
+        windowHeight = window.innerHeight,
+        windowScroll = window.scrollY;
+
+    // if window scroll become where end section skills 
+    if (windowScroll > (skillsHeightPage + skillsHeight - windowHeight)) {
+        // looping to progresses anmation
+        anmation.forEach(function (el) {
+            // code css animation
+            el.style.animation = "progress ease-in-out 1.5s running";
+        })
     }
 };
+
+
+
 
 /****************************************************************************
 ********************* Functionalty for onclick buttons **********************
 ****************************************************************************/
 let icon = document.getElementById("icon"),
+    links = document.querySelectorAll("header nav ul li a"),
     logo = document.querySelector("header .logo"),
     buttonScills = document.querySelector(".skills .container section.content button "),
     bottonLearnMore = document.querySelector(".landing .text button"),
     bottonDownloadResume = document.querySelector(".resume button"),
     portfolioButtonMore = document.querySelector(".portfolio button");
 
+// icon button menue => on click toggle class click 
 icon.onclick = function () {
     icon.classList.toggle("click");
 };
 
+// when clicked to linkes menue => remove class click in icon
+links.forEach(function(el) {
+    el.onclick = function () {
+        icon.classList.remove("click");
+    }
+})
+
+// logo item to on click => #home
 logo.onclick = function () {
     open("#home", "_self");
 };
 
+// top page bottun on click action
 topPage.onclick = function () {
     window.scrollTo({
         top: 0,
@@ -142,18 +178,27 @@ topPage.onclick = function () {
     })
 }
 
-buttonScills.onclick = function () {
-    open("#contact", "_self");
+// send to Arbic page
+languge.onclick = function () {
+    open("arbic.html", "_self")
 }
 
+//  bottun learn more with landing section on click action
 bottonLearnMore.onclick = function () {
     open("#about", "_self");
 }
 
-bottonDownloadResume.onclick = function () {
-    open("https://www.linkedin.com/in/%D8%A3%D8%AD%D9%85%D8%AF-%D9%83%D9%85%D8%A7%D9%84-a458a41a2/");
+//  bottun contact me with scils section on click action
+buttonScills.onclick = function () {
+    open("#contact", "_self");
 }
 
+//  bottun Download Resume with resume section on click action
+bottonDownloadResume.onclick = function () {
+    open("");
+}
+
+// bottun portfolio  more or less => action
 portfolioButtonMore.onclick = function () {
     if (this.textContent === "more") {
         document.querySelector(".portfolio .projects").style.maxHeight = "unset";
@@ -166,7 +211,7 @@ portfolioButtonMore.onclick = function () {
 
 /****************************************************************************
 ********************* functionalty Buttons Action Page **********************
-*************************** functionalty portflio ***************************
+*(************************* functionalty portflio ***************************
 ****************************************************************************/
 // functionalty portflio category
 let category = document.querySelectorAll(".portfolio ul li"),
@@ -191,7 +236,7 @@ for (c = 1; c < category.length; c++) {
         // loop delete section projects when click this category
         for (i = 0; i < projectCategory.length; i++) {
             projectCategoryName = projectCategory[i].textContent;
-            if (!projectCategoryName.includes(categoryName)) {             
+            if (!projectCategoryName.includes(categoryName)) {
                 projectCategory[i].parentElement.parentElement.style.display = "none";
             }
         }
@@ -209,6 +254,43 @@ category[0].onclick = function () {
     }
     // add class active for this category
     this.classList.add("active");
+}
+
+/****************************************************************************
+*********************** Functionalty of contact form ************************
+****************************************************************************/
+
+// creat alert to form not work with javascript
+let alert = document.createElement("span");
+let alertText = document.createTextNode("sorry! The form is not work");
+
+// add text on alert
+alert.appendChild(alertText);
+
+// style alert => css style
+alert.style.cssText = `
+    display: block;
+    background: #cfe2ff;
+    color: #084298;
+    padding: 20px;
+    margin-top: 25px;
+    text-align: center;
+    border-radius: 7px;
+    font-size: 18px;
+`;
+
+
+// function to submit form 
+document.forms[0].onsubmit = function (e) {
+    // not submit form becouse not work
+    e.preventDefault();
+    // when on click to contact buttom => add alert in last form
+    this.appendChild(alert);
+    // aftrer 4 secound => delet alert 
+    setTimeout(function () {
+        // deler alert
+        alert.remove();
+    }, 6000)
 }
 
 /****************************************************************************
@@ -245,8 +327,8 @@ project_10.onclick = function () {
     open("https://elmohtarif2410.github.io/potfolio_one/");
 };
 project_11.onclick = function () {
-    open("https://elmohtarif2410.github.io/calculator-app/");
+    open("https://elmohtarif2410.github.io/age-calculator/");
 };
 project_12.onclick = function () {
-    open("https://elmohtarif2410.github.io/age-calculator/");
+    open("https://elmohtarif2410.github.io/calculator-app/");
 };

@@ -1,0 +1,59 @@
+/* body */
+body {
+    font-family: 'Tajawal', sans-serif, Tahoma, Verdana;
+}
+
+/* Header */
+@media (max-width: 991px) { 
+    header nav ul {
+        right: auto;
+        left: 0;
+    }
+}
+
+/* Aboute Me */
+.about-me .container img {
+    right: 0;
+}
+
+
+.about-me .container section i {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+/* My Skills */
+.skills section.progress div span::before,
+.skills section.progress div span::after {
+    right: auto;
+    left: 0;
+    transform: translateX(-50%);
+}
+
+/* testmonials  */
+.testmonials blockquote::before {
+    content: "\f10e";
+    transform: translate(15px, -5px)
+}
+
+.testmonials blockquote::after {
+    content: '\f10d';
+    transform: translate(-4px, -4px)
+}
+
+/* Portfolio */
+.portfolio h2::before {
+    transform: translateX(-30%);
+}
+
+.portfolio .projects section .text {text-align: right}
+
+
+/* Button Top Page */
+.top-page span:last-child {transform: translate(-16px, 21px)}
+
+/* Button languge */
+#languge {
+    left: auto;
+    right: 30px;
+}
