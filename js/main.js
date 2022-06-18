@@ -77,8 +77,8 @@ testmonialsButton[0].onclick = function () {
     testmonialsButton[1].classList.remove("active");
     testmonialsButton[2].classList.remove("active");
     // change to image
-    quote.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem accusamus laborum deserunt, illo reprehenderit repellendus aliquam, dolorum unde mollitia veritatis odio. Exercitationem voluptatibus facilis error atque possimus perferendis.";
-    nameQuote.textContent = "name one";
+    quote.textContent = "During the period that I worked with Ahmed Kamal, he was a professional and insulting person, and he had many ingredients that made him enjoy the approval and love of everyone who worked with him.";
+    nameQuote.textContent = "ahmed gamal";
 }
 
 testmonialsButton[1].onclick = function () {
@@ -87,8 +87,8 @@ testmonialsButton[1].onclick = function () {
     testmonialsButton[0].classList.remove("active");
     testmonialsButton[2].classList.remove("active");
     // change to image
-    quote.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem accusamus laborum deserunt, illo reprehenderit repellendus aliquam, dolorum unde mollitia veritatis odio. Exercitationem voluptatibus facilis error atque possimus.";
-    nameQuote.textContent = "name Two";
+    quote.textContent = "A person with a lot of potentials, capabilities and high capabilities, I was pleased to work with him and I hope that we will work together in many periods to come.";
+    nameQuote.textContent = "mouhammad";
 }
 
 testmonialsButton[2].onclick = function () {
@@ -97,8 +97,8 @@ testmonialsButton[2].onclick = function () {
     testmonialsButton[0].classList.remove("active");
     testmonialsButton[1].classList.remove("active");
     // change to image
-    quote.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem accusamus laborum deserunt, illo reprehenderit repellendus aliquam, dolorum unde mollitia veritatis odio. Exercitationem voluptatibus facilis error atque.";
-    nameQuote.textContent = "name three"
+    quote.textContent = "Professional work and excellent service. I have never in my life dealt with a person more skilled or qualified than him. I was very happy to work with him and I will not deal with anyone else but him in the upcoming projects.";
+    nameQuote.textContent = "osama mouhammad"
 }
 
 

@@ -23,22 +23,22 @@ testmonialsButton[0].onclick = function () {
     testmonialsButton[0].classList.add("active");
     testmonialsButton[1].classList.remove("active");
     testmonialsButton[2].classList.remove("active");
-    quote.textContent = "القراءة والمطالعة من أهم العادات التي تطور الشخصية وتنمي المعرفة والثقافة، ينبغي على أي أنسان أن يطور من ذاته ويرتقي بأخلاقه لكي يصل بنفسه إلى درجة عالية من الرقي الأنساني، بالأخلاق الحميدة والصفات القوية تسمو الأمم وتتطور يجب علينا التحلي بالأخلاق لكي نسمو لدرجات العزة والكرامة ولكي نكون قدوة يحتذى بها في المجتمع.";
-    nameQuote.textContent = "العميل الأول";
+    quote.textContent = "على مدار الفترة التي عملت فيه مع احمد كمال، كان شخص يتسم بالاحترافية والمهينة، ولديه الكثير من المقومات التي تجعله يحظى برضى وحب جميع من عمل معه.";
+    nameQuote.textContent = "احمد جمال";
 }
 testmonialsButton[1].onclick = function () {
     testmonialsButton[1].classList.add("active");
     testmonialsButton[0].classList.remove("active");
     testmonialsButton[2].classList.remove("active");
-    quote.textContent = "القراءة والمطالعة من أهم العادات التي تطور الشخصية وتنمي المعرفة والثقافة، ينبغي على أي أنسان أن يطور من ذاته ويرتقي بأخلاقه لكي يصل بنفسه إلى درجة عالية من الرقي الأنساني، بالأخلاق الحميدة والصفات القوية تسمو الأمم وتتطور يجب علينا التحلي بالأخلاق لكي نسمو لدرجات العزة والكرامة .";
-    nameQuote.textContent = "العميل الثاني";
+    quote.textContent = "شخص لديه الكثير من المقومات والامكانيات والقدرات العالية، سعدت بالعمل معه واتمنى ان نعمل سويا في الكثير من الفترات الاتية.";
+    nameQuote.textContent = "محمد";
 }
 testmonialsButton[2].onclick = function () {
     testmonialsButton[2].classList.add("active");
     testmonialsButton[0].classList.remove("active");
     testmonialsButton[1].classList.remove("active");
-    quote.textContent = "القراءة والمطالعة من أهم العادات التي تطور الشخصية وتنمي المعرفة والثقافة، ينبغي على أي أنسان أن يطور من ذاته ويرتقي بأخلاقه لكي يصل بنفسه إلى درجة عالية من الرقي الأنساني، بالأخلاق الحميدة والصفات القوية تسمو الأمم وتتطور يجب علينا التحلي بالأخلاق لكي نسمو لدرجات العزة والكرامة.";
-    nameQuote.textContent = "العميل الثالث";
+    quote.textContent = "عمل احترافي وخدمة ممتازة، لم اتعامل في حياتي مع شخص اكثر مهارة ولا كفائة منه، سعدت جداً بالعمل معه ولن اتعامل مع اي شخص اخر غيره في المشاريع القادمة.";
+    nameQuote.textContent = "اسامة محمد";
 }
 
 // Functionalty of contact form
