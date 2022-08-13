@@ -391,7 +391,8 @@ header nav ul li a:hover {
     position: absolute;
     top: 0;
     left: 0;
-    object-fit: cover
+    object-fit: cover;
+    object-position: top;
 }
 
 .about-me .container .text {

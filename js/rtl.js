@@ -4,7 +4,7 @@
 
 // send to English page
 languge.onclick = function () {
-    open("index.html", "_self")
+    open("../", "_self")
 }
 
 //Portfolio Button More

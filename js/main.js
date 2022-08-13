@@ -180,7 +180,7 @@ topPage.onclick = function () {
 
 // send to Arbic page
 languge.onclick = function () {
-    open("arbic.html", "_self")
+    open("/arabic", "_self")
 }
 
 //  bottun learn more with landing section on click action
@@ -331,4 +331,13 @@ project_11.onclick = function () {
 };
 project_12.onclick = function () {
     open("https://elmohtarif2410.github.io/calculator-app/");
+};
+project_13.onclick = function () {
+    open("https://elmohtarif2410.github.io/template-three/");
+};
+project_14.onclick = function () {
+    open("https://elmohtarif2410.github.io/bondi/");
+};
+project_15.onclick = function () {
+    open("https://aragontechno.com/");
 };
