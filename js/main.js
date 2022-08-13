@@ -297,7 +297,7 @@ document.forms[0].onsubmit = function (e) {
 ****************** Functionalty of open method to projects ******************
 ****************************************************************************/
 project_1.onclick = function () {
-    open("https://elmohtarif2410.github.io/My-portofolio/");
+    open("https://muhtarif.me");
 };
 project_2.onclick = function () {
     open("https://elmohtarif2410.github.io/Template-One/");
